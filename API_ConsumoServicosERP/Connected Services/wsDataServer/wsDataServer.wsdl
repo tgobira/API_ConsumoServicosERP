@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.totvs.com/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsDataServer" targetNamespace="http://www.totvs.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.totvs.com/Imports">
+      <xsd:import schemaLocation="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd0" namespace="http://www.totvs.com/" />
+      <xsd:import schemaLocation="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Reflection" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRMSServer_Implements_InputMessage">
+    <wsdl:part name="parameters" element="tns:Implements" />
+  </wsdl:message>
+  <wsdl:message name="IRMSServer_Implements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImplementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRMSServer_CheckServiceActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckServiceActivity" />
+  </wsdl:message>
+  <wsdl:message name="IRMSServer_CheckServiceActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckServiceActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsBase_AutenticaAcesso_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticaAcesso" />
+  </wsdl:message>
+  <wsdl:message name="IwsBase_AutenticaAcesso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticaAcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_GetSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchema" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_GetSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_IsValidDataServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidDataServer" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_IsValidDataServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidDataServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_GetSchemaEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaEmail" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_GetSchemaEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemaEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadView_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadView" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadViewEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadViewEmail" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadViewEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadViewEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRecord" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadRecordEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRecordEmail" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadRecordEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadRecordEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_SaveRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecord" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_SaveRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_SaveRecordEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecordEmail" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_SaveRecordEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRecordEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_DeleteRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecord" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_DeleteRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_DeleteRecordEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordEmail" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_DeleteRecordEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_DeleteRecordByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordByKey" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_DeleteRecordByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadLookupView_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLookupView" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadLookupView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLookupViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadLookupViewEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLookupViewEmail" />
+  </wsdl:message>
+  <wsdl:message name="IwsDataServer_ReadLookupViewEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadLookupViewEmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRMSServer">
+    <wsdl:operation name="Implements">
+      <wsdl:input wsam:Action="http://www.totvs.com/IRMSServer/Implements" message="tns:IRMSServer_Implements_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IRMSServer/ImplementsResponse" message="tns:IRMSServer_Implements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceActivity">
+      <wsdl:input wsam:Action="http://www.totvs.com/IRMSServer/CheckServiceActivity" message="tns:IRMSServer_CheckServiceActivity_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IRMSServer/CheckServiceActivityResponse" message="tns:IRMSServer_CheckServiceActivity_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IwsBase">
+    <wsdl:operation name="Implements">
+      <wsdl:input wsam:Action="http://www.totvs.com/IRMSServer/Implements" message="tns:IRMSServer_Implements_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IRMSServer/ImplementsResponse" message="tns:IRMSServer_Implements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceActivity">
+      <wsdl:input wsam:Action="http://www.totvs.com/IRMSServer/CheckServiceActivity" message="tns:IRMSServer_CheckServiceActivity_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IRMSServer/CheckServiceActivityResponse" message="tns:IRMSServer_CheckServiceActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutenticaAcesso">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsBase/AutenticaAcesso" message="tns:IwsBase_AutenticaAcesso_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsBase/AutenticaAcessoResponse" message="tns:IwsBase_AutenticaAcesso_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IwsDataServer">
+    <wsdl:operation name="Implements">
+      <wsdl:input wsam:Action="http://www.totvs.com/IRMSServer/Implements" message="tns:IRMSServer_Implements_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IRMSServer/ImplementsResponse" message="tns:IRMSServer_Implements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceActivity">
+      <wsdl:input wsam:Action="http://www.totvs.com/IRMSServer/CheckServiceActivity" message="tns:IRMSServer_CheckServiceActivity_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IRMSServer/CheckServiceActivityResponse" message="tns:IRMSServer_CheckServiceActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/GetSchema" message="tns:IwsDataServer_GetSchema_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/GetSchemaResponse" message="tns:IwsDataServer_GetSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidDataServer">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/IsValidDataServer" message="tns:IwsDataServer_IsValidDataServer_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/IsValidDataServerResponse" message="tns:IwsDataServer_IsValidDataServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaEmail">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/GetSchemaEmail" message="tns:IwsDataServer_GetSchemaEmail_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/GetSchemaEmailResponse" message="tns:IwsDataServer_GetSchemaEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadView">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/ReadView" message="tns:IwsDataServer_ReadView_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/ReadViewResponse" message="tns:IwsDataServer_ReadView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadViewEmail">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/ReadViewEmail" message="tns:IwsDataServer_ReadViewEmail_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/ReadViewEmailResponse" message="tns:IwsDataServer_ReadViewEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadRecord">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/ReadRecord" message="tns:IwsDataServer_ReadRecord_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/ReadRecordResponse" message="tns:IwsDataServer_ReadRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadRecordEmail">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/ReadRecordEmail" message="tns:IwsDataServer_ReadRecordEmail_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/ReadRecordEmailResponse" message="tns:IwsDataServer_ReadRecordEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecord">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/SaveRecord" message="tns:IwsDataServer_SaveRecord_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/SaveRecordResponse" message="tns:IwsDataServer_SaveRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecordEmail">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/SaveRecordEmail" message="tns:IwsDataServer_SaveRecordEmail_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/SaveRecordEmailResponse" message="tns:IwsDataServer_SaveRecordEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecord">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/DeleteRecord" message="tns:IwsDataServer_DeleteRecord_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/DeleteRecordResponse" message="tns:IwsDataServer_DeleteRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordEmail">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/DeleteRecordEmail" message="tns:IwsDataServer_DeleteRecordEmail_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/DeleteRecordEmailResponse" message="tns:IwsDataServer_DeleteRecordEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByKey">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/DeleteRecordByKey" message="tns:IwsDataServer_DeleteRecordByKey_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/DeleteRecordByKeyResponse" message="tns:IwsDataServer_DeleteRecordByKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLookupView">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/ReadLookupView" message="tns:IwsDataServer_ReadLookupView_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/ReadLookupViewResponse" message="tns:IwsDataServer_ReadLookupView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadLookupViewEmail">
+      <wsdl:input wsam:Action="http://www.totvs.com/IwsDataServer/ReadLookupViewEmail" message="tns:IwsDataServer_ReadLookupViewEmail_InputMessage" />
+      <wsdl:output wsam:Action="http://www.totvs.com/IwsDataServer/ReadLookupViewEmailResponse" message="tns:IwsDataServer_ReadLookupViewEmail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RM_IRMSServer" type="tns:IRMSServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Implements">
+      <soap:operation soapAction="http://www.totvs.com/IRMSServer/Implements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceActivity">
+      <soap:operation soapAction="http://www.totvs.com/IRMSServer/CheckServiceActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RM_IwsBase" type="tns:IwsBase">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Implements">
+      <soap:operation soapAction="http://www.totvs.com/IRMSServer/Implements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceActivity">
+      <soap:operation soapAction="http://www.totvs.com/IRMSServer/CheckServiceActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutenticaAcesso">
+      <soap:operation soapAction="http://www.totvs.com/IwsBase/AutenticaAcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RM_IwsDataServer" type="tns:IwsDataServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Implements">
+      <soap:operation soapAction="http://www.totvs.com/IRMSServer/Implements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceActivity">
+      <soap:operation soapAction="http://www.totvs.com/IRMSServer/CheckServiceActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchema">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/GetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidDataServer">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/IsValidDataServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemaEmail">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/GetSchemaEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadView">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/ReadView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadViewEmail">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/ReadViewEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadRecord">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/ReadRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadRecordEmail">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/ReadRecordEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecord">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/SaveRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRecordEmail">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/SaveRecordEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecord">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/DeleteRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordEmail">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/DeleteRecordEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordByKey">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/DeleteRecordByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLookupView">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/ReadLookupView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadLookupViewEmail">
+      <soap:operation soapAction="http://www.totvs.com/IwsDataServer/ReadLookupViewEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsDataServer">
+    <wsdl:port name="RM_IRMSServer" binding="tns:RM_IRMSServer">
+      <soap:address location="http://187.94.63.109:8073/wsDataServer/IRMSServer" />
+    </wsdl:port>
+    <wsdl:port name="RM_IwsBase" binding="tns:RM_IwsBase">
+      <soap:address location="http://187.94.63.109:8073/wsDataServer/IwsBase" />
+    </wsdl:port>
+    <wsdl:port name="RM_IwsDataServer" binding="tns:RM_IwsDataServer">
+      <soap:address location="http://187.94.63.109:8073/wsDataServer/IwsDataServer" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1924bcf-1425-4a4b-96f7-f8c384a2ba86" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://nre.hom.rm.totvscloud.com.br:8073/wsDataServer/MEX?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mex.xsd" MetadataType="Schema" ID="709ce91e-7e74-4e70-a34f-33d3aedb7eb4" SourceId="1" SourceUrl="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd3" />
+    <MetadataFile FileName="mex1.xsd" MetadataType="Schema" ID="353e897f-eb27-4c04-ab3c-bc030bd24c9e" SourceId="1" SourceUrl="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd1" />
+    <MetadataFile FileName="mex2.xsd" MetadataType="Schema" ID="604dd030-7dd0-4052-81e2-309b234ad5a2" SourceId="1" SourceUrl="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd2" />
+    <MetadataFile FileName="mex3.xsd" MetadataType="Schema" ID="7a44bc70-3f72-40ad-b550-b1dbd687229f" SourceId="1" SourceUrl="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd0" />
+    <MetadataFile FileName="wsDataServer.wsdl" MetadataType="Wsdl" ID="0fe085c0-c154-4d70-8d7d-f95c2c28a26f" SourceId="1" SourceUrl="http://nre.hom.rm.totvscloud.com.br:8073/wsDataServer/MEX?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

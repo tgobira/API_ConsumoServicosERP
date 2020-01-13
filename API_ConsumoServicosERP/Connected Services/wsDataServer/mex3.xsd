@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.totvs.com/" elementFormDefault="qualified" targetNamespace="http://www.totvs.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://187.94.63.109:8073/wsDataServer/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="Implements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="type" nillable="true" type="q1:Type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImplementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImplementsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckServiceActivity">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckServiceActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckServiceActivityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutenticaAcesso">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutenticaAcessoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutenticaAcessoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSchemaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsValidDataServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsValidDataServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsValidDataServerResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailUsuarioContexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemaEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSchemaEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadViewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadViewEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailUsuarioContexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadViewEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadViewEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PrimaryKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadRecordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRecordEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PrimaryKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailUsuarioContexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadRecordEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadRecordEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRecordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecordEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailUsuarioContexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecordEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRecordEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRecordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecordEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailUsuarioContexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecordEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRecordEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecordByKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PrimaryKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRecordByKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRecordByKeyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadLookupView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadLookupViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadLookupViewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadLookupViewEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataServerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailUsuarioContexto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadLookupViewEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReadLookupViewEmailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
